@@ -20,5 +20,10 @@
             Tabuleiro = tabuleiro;
             Cor = cor;
         }
+
+        public void incrementarQteMovimentos()
+        {
+            QteMovimentos++;
+        }
     }
 }
