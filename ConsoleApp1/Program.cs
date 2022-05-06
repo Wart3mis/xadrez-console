@@ -17,11 +17,8 @@ namespace xadrez_console
                     try
                     {
                         Console.Clear();
-                        Tela.imprimirTabuleiro(partida.Tabuleiro);
-                        Console.WriteLine();
-                        Console.WriteLine("Turno:" + partida.Turno);
-                        Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
-
+                        Tela.imprimirPartida(partida);
+                       
                         Console.WriteLine();
                         Console.Write("Origem: ");
                         Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
@@ -42,7 +39,7 @@ namespace xadrez_console
                     catch(TabuleiroException e)
                     {
                         Console.WriteLine(e.Message);
-                        Console.WriteLine("Aperte ENTER e selecione uma nova peça!");
+                        Console.WriteLine("Aperte ENTER e selecione nmovamente!");
                         Console.ReadLine();
                     }
                 }
