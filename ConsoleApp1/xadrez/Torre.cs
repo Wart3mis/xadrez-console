@@ -16,6 +16,7 @@ namespace xadrez
         private bool podeMover(Posicao pos)
         {
             Peca p = Tabuleiro.peca(pos);
+            
             return p == null || p.Cor != Cor;
         }
 
@@ -28,6 +29,8 @@ namespace xadrez
             //acima
             pos.definirValores(Posicao.Linha - 1, Posicao.Coluna);
             while(Tabuleiro.posicaoValida(pos) && podeMover(pos))
+            
+            
             {
                 mat[pos.Linha, pos.Coluna] = true;
                 if(Tabuleiro.peca(pos) != null && Tabuleiro.peca(pos).Cor != Cor)
