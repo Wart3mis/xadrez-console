@@ -39,11 +39,15 @@ namespace xadrez_console
                     catch(TabuleiroException e)
                     {
                         Console.WriteLine(e.Message);
-                        Console.WriteLine("Aperte ENTER e selecione nmovamente!");
+                        Console.WriteLine("Aperte ENTER e selecione novamente!");
                         Console.ReadLine();
                     }
                 }
+
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
+
             catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
